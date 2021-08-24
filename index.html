@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>Chess Club</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<div class="center">
+    <h1>DHS Chess Club</h1>
+</div>
+
+<div class="section" style="background-color: rgb(53, 80, 112)">
+    <h1>Contact Us</h1>
+    <p>
+        The club discord server is our primary form of communication, outside of in-person meetings. To see club announcements / updates, chat with other club members as well as alumni, and be in the general loop, it is highly recommended to join the discord
+        server.
+    </p>
+    <h2>Join our discord: <a href=" https://discord.gg/8DYn28z">discord.gg/8DYn28z</a></h2>
+</div>
+<div class="section" style="background-color: rgb(109, 89, 122);">
+    <p>
+        Our primary online chess platform is chess.com, where we have an official school club on the website. It is a great spot where you can contact and play against other club members, and puzzles are shared on the platform as well.
+    </p>
+
+    <h2>Join our chess.com:
+        <a href="https://www.chess.com/club/davis-high-school">chess.com/club/davis-high-school</a></h2>
+</div>
+<div class="section" style="background-color: rgb(181, 101, 118);">
+    <p>The club also has an Instagram account, and an email account.</p>
+    <a href="https://www.instagram.com/dhschessclub/">instagram.com/dhschessclub</a>
+    <p>Email: davishighchess@gmail.com</p>
+</div>
+
+<div class="section" style="background-color: rgb(229, 107, 111);">
+    <h1>Photos</h1>
+    <div class="centerIMG">
+        <div cclass="imgContainer">
+            <img class="mySlides" src="./ImgA.jpg">
+            <img class="mySlides" src="./ImgB.jpg">
+            <img class="mySlides" src="./ImgC.jpg">
+            <img class="mySlides" src="./ImgD.jpg">
+        </div>
+        <button class="w3-button w3-display-left " onclick="plusDivs(-1) ">&#10094;</button>
+        <button class="w3-button w3-display-right " onclick="plusDivs(+1) ">&#10095;</button>
+        <h2 id="caption" style="display: inline;">caption</h1>
+    </div>
+</div>
+
+
+<div class="section " style="background-color: rgb(234, 172, 139); ">
+    <h1>Current Club Officers</h1>
+    <h2>President: Rochelle Wu</h2>
+    <h2>Vice President: Aaron Nguyen</h2>
+    <h2>Treasurer: Arden Zarins</h2>
+    <h2>Secretary: Kyle Watkins</h2>
+    <p>All club officers can be contacted through the club discord server.</p>
+</div>
+
+
+<script>
+    //Javascript
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides ");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none ";
+        }
+        x[slideIndex - 1].style.display = "block ";
+
+        //Set the caption
+        var captions = ["", "", "", ""];
+        if (captions[slideIndex - 1] == undefined) {
+            captions[slideIndex - 1] = "";
+        }
+        document.getElementById("caption").innerHTML = captions[slideIndex - 1];
+    }
+</script>
+
+</html>
